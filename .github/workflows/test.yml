@@ -16,7 +16,7 @@ jobs:
         id: checkshouldrun
         shell: bash
         run: |
-          if [[ 'true' == 'true' ]]; then
+          if [[ 'true' == 'false' ]]; then
             echo "Shouldn't run. Exiting."
             echo "doRun=false" >> $GITHUB_OUTPUT
             exit 0
