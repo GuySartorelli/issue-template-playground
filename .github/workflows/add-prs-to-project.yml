@@ -26,8 +26,8 @@ jobs:
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           echo "Author is $PR_AUTHOR"
-          CMS_SQUAD='GuySartorelli-false emteknetnz maxime-rainville'
-          IN_CMS_SQUAD=$(echo $CMS_SQUAD | grep -w $PR_AUTHOR)
+          CMS_SQUAD="GuySartorelli-false\nemteknetnz\nmaxime-rainville"
+          IN_CMS_SQUAD=$(echo $CMS_SQUAD | grep -x $PR_AUTHOR)
           if [[ $IN_CMS_SQUAD != '' ]]; then
             echo "Author is in CMS Squad. Skipping."
             echo "should_add_to_project=false" >> $GITHUB_OUTPUT
