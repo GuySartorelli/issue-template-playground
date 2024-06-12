@@ -23,7 +23,7 @@ jobs:
       - name: Check if should be added
         id: check-if-should-add
         env:
-          PR_AUTHOR: ${{ github.event.author.login }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           echo "Author is $PR_AUTHOR"
           CMS_SQUAD='GuySartorelli-false emteknetnz maxime-rainville'
