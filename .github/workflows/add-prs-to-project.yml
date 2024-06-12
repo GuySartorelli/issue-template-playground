@@ -18,7 +18,7 @@ jobs:
     # Only run on the GuySartorelli account
     if: github.repository_owner == 'GuySartorelli'
     permissions:
-      project: write
+      repository-projects: write
     runs-on: ubuntu-latest
     steps:
 
