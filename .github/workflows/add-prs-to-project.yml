@@ -37,7 +37,7 @@ jobs:
           echo "should_add_to_project=true" >> $GITHUB_OUTPUT
     
       - name: Add to project
-        uses: actions/add-to-project@RELEASE_VERSION
+        uses: actions/add-to-project@v1.0.1
         if: steps.check-if-should-add.outputs.should_add_to_project == 'true'
         with:
           # Add to the Community Contributions project
