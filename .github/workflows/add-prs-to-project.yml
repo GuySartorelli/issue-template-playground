@@ -11,7 +11,7 @@ permissions: {}
 jobs:
   addprtoproject:
     # Only run on the silverstripe account
-    if: github.repository_owner == 'silverstripe'
+    if: github.repository_owner == 'GuySartorelli'
     runs-on: ubuntu-latest
     steps:
       - name: Add PR to github project
